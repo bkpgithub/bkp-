@@ -22,7 +22,7 @@
         
             if(result[j]['name']==name){
               $("#name").html(result[j]['name']);
-              $(".info_content").html(result[j]['content']);
+              $("#addcontent").after(result[j]['content']);
             }
         }
       })
@@ -77,25 +77,10 @@
       <div class="news_other">日期：2018-05-21 11:38</div>
       <div class="clear"></div>
       <div class="info_content">
-        <div style="margin: 0px; padding: 0px; border: 0px; color: rgb(85, 85, 85); font-family: Simsun; font-size: 14px; line-height: 28px; text-align: center;">
+        <div style="margin: 0px; padding: 0px; border: 0px; color: rgb(85, 85, 85); font-family: Simsun; font-size: 14px; line-height: 28px; text-align: center;" id="addcontent">
           <img alt="" id="images" original="/uploads/allimg/170603/1-1F603124I6128.jpg" src="../../uploads/180521/1-1P521113Z1639.png"
             style="border: 0px;" /></div>
-        <div style="margin: 0px; padding: 0px; border: 0px; color: rgb(85, 85, 85); font-family: Simsun; font-size: 14px; line-height: 28px; text-align: center;">
-          案例分析题是向考生提供一段背景资料，然后提出问题，在问题中要求考生阅读分析给定的资料，依据一定的理论知识，或做出决策，或作出评价，或提出具体的解决问题的方法或意见等。案例分析题属于综合性较强的题目类型，考察的是高层次的认知目标。它不仅能考察考生了解知识的程度，而且能考察考生理解、运用知识的能力，更重要的是它能考察考生综合、分析、评价方面的能力。</div>
-        <div label-module="para" style="margin: 0px; padding: 0px; border: 0px; color: rgb(85, 85, 85); font-family: Simsun; font-size: 14px; line-height: 28px; text-align: center;">
-          案例分析题是向考生提供一段背景资料，然后提出问题，在问题中要求考生阅读分析给定的资料，依据一定的理论知识，或做出决策，或作出评价，或提出具体的解决问题的方法或意见等。</div>
-        <div label-module="para" style="margin: 0px; padding: 0px; border: 0px; color: rgb(85, 85, 85); font-family: Simsun; font-size: 14px; line-height: 28px; text-align: center;">
-          案例分析题属于综合性较强的题目类型，考察的是高层次的认知目标。它不仅能考察考生了解知识的程度，而且能考察考生理解、运用知识的能力，更重要的是它能考察考生综合、分析、评价方面的能力。因此，案例分析是区分度很高的题目类型。</div>
-        <div label-module="para" style="margin: 0px; padding: 0px; border: 0px; color: rgb(85, 85, 85); font-family: Simsun; font-size: 14px; line-height: 28px; text-align: center;">
-          并且大型企业如四大会计师事务所、越来越重视舞台展示型的案例分析中涌现的优异学子。</div>
-        <div label-module="para" style="margin: 0px; padding: 0px; border: 0px; color: rgb(85, 85, 85); font-family: Simsun; font-size: 14px; line-height: 28px; text-align: center;">
-          当然，案例分析也有它的不足之处，主要有三点：</div>
-        <div label-module="para" style="margin: 0px; padding: 0px; border: 0px; color: rgb(85, 85, 85); font-family: Simsun; font-size: 14px; line-height: 28px; text-align: center;">
-          1、 编制比较困难。案例分析题对背景资料有很高的要求，这给编制带来较大的困难。</div>
-        <div label-module="para" style="margin: 0px; padding: 0px; border: 0px; color: rgb(85, 85, 85); font-family: Simsun; font-size: 14px; line-height: 28px; text-align: center;">
-          2、 在一份试卷中所占的篇幅或分数较大，但题量较小，因而影响到整卷对知识面的覆盖。</div>
-        <div label-module="para" style="margin: 0px; padding: 0px; border: 0px; color: rgb(85, 85, 85); font-family: Simsun; font-size: 14px; line-height: 28px; text-align: center;">
-          3、 评分上容易受阅卷者主观因素的干扰，所以评分信度不易高。</div>
+     
       </div>
 
     </div>
