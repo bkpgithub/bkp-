@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>超级牛逼抽奖</title>
+		<script src="jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+	</head>
+
+	<body>
+		<script>
+			function getResult(arr) {
+				var leng = 0;
+				for(var i = 0; i < arr.length; i++) {
+					leng += arr[i]
+				}
+				for(var i = 0; i < arr.length; i++) {
+					var random = parseInt(Math.random() * leng);
+					if(random < arr[i]) {
+						return i
+					} else {
+						leng -= arr[i]
+					}
+				}
+			}
+
+			function downloadForJS() {
+				//使用html2canvas 转换html为canvas
+				html2canvas(document.getElementById("asb")).then(function(canvas) {
+
+					var imgUri = canvas.toDataURL("image/jpg").replace("image/jpg", "image/octet-stream"); // 获取生成的图片的url 　
+					var saveLink = document.createElement('a');
+					saveLink.href = imgUri;
+					saveLink.download = '' + $("#titleplay").html().trim() + '.jpg';
+					saveLink.click();
+					/*console.log(imgUri); */
+				});
+			}
+			$(function() {
+				var count = 0;
+				$("#choujiangjieguo").empty();
+				//加载抽过奖的人最新的一次
+				$.getJSON('json1.json', function(result) {
+
+					count = result.length;
+					for(var j = 0; j < result.length; j++) {
+						$("#addpeople").append("<div id='father'><input type='checkbox' name='select' checked value='" + result[j]['name'] + "'/>" + result[j]['name'] + "<div>");
+					}
+				})
+				//开始抽奖
+				$("#statr").click(function() {
+					$("#choujiangjieguo").empty();
+					var namebus = $("input[name='select']:checked");
+					var h = 0;
+					for(h = 0; h < namebus.length; h++) {
+						var namesssss = namebus[h].value;
+
+						var id = "";
+
+						var flag = false;
+						var aaaa = "&nbsp;&nbsp;&nbsp;<img src = \"img/生日.png\" /><font style='color:#FF34B3;font-size:25px;font-family:cursive'>生日BUFF生效</font><img src = \"img/生日.png\" />";
+						for(var hh = 0; hh < 1; hh++) {
+							var names = aa();
+
+							if(names == "神级宝宝一只" || names == "神宝宝一只" || names == "逆天宝宝一只") {
+
+								id += "&nbsp;&nbsp;&nbsp;<font style='color:red'>" + names + "</font><img src = \"img/baobao.png\" width='32px' height='32px'/>&nbsp;&nbsp;";
+								flag = true;
+							} else if(names == "100元现金券") {
+								id += "&nbsp;<font style='color:red'>" + names + "</font><img src = \"img/dianka.png\" width='32px' height='32px'/>&nbsp;&nbsp;";
+								flag = true;
+							} else if(names == "神级武器") {
+								id += "&nbsp;<font style='color:red'>" + names + "</font><img src = \"img/shenji.png\" width='32px' height='32px'/>&nbsp;&nbsp;";
+								flag = true;
+							} else if(names == "上古武器") {
+								id += "&nbsp;<font style='color:red'>" + names + "</font><img src = \"img/peishi1.png\" width='32px' height='32px'/>&nbsp;&nbsp;";
+								flag = true;
+							} else if(names == "牛逼神兵（任选）") {
+								id += "&nbsp;<font style='color:red'>" + names + "</font><img src = \"img/shenbing.png\" width='32px' height='32px'/>&nbsp;&nbsp;";
+								flag = true;
+							} else if(names == "传世装备一套（任选）") {
+								id += "&nbsp;<font style='color:red'>" + names + "</font><img src = \"img/shen.png\" width='32px' height='32px'/>&nbsp;&nbsp;";
+								flag = true;
+							} else if(names == "护身符") {
+								id += "&nbsp;<font style='color:red'>" + names + "</font><img src = \"img/shen.png\" width='32px' height='32px'/>&nbsp;&nbsp;";
+								flag = true;
+							} else if(names == "终极技能书") {
+								var gArr1 = [];
+								var jinengshu = [{
+									"name": "绝境逢生",
+									"prop": 70
+								}, {
+									"name": "子虚乌有",
+									"prop": 60
+								}, {
+									"name": "化无",
+									"prop": 50
+								}];
+								for(var i = 0; i < jinengshu.length; i++) {
+									gArr1.push(jinengshu[i]['prop'])
+								}
+								var jinengname = jinengshu[getResult(gArr1)]['name'];
+								if(jinengname == "绝境逢生") {
+									id += "&nbsp;<font style='color:red'>" + names + "（" + jinengname + "）" + "</font><img src = \"img/juejing3.png\" width='25px' height='25px'/>&nbsp;&nbsp;";
+								} else if(jinengname == "子虚乌有") {
+									id += "&nbsp;<font style='color:red'>" + names + "（" + jinengname + "）" + "</font><img src = \"img/zixu.png\" width='25px' height='25px'/ />&nbsp;&nbsp;";
+								} else if(jinengname == "化无") {
+									id += "&nbsp;<font style='color:red'>" + names + "（" + jinengname + "）" + "</font><img src = \"img/huawu.png\" width='25px' height='25px'/ />&nbsp;&nbsp;";
+								}
+								flag = true;
+							} else {
+								id += "&nbsp;&nbsp;&nbsp;<font style='color:#FFA500'>" + names + "</font>&nbsp;&nbsp;&nbsp;";
+							}
+						}
+						if(flag == true) {
+							id = id + aaaa;
+						}
+						var html = "恭喜<font style='font-weight:400;font-size:20px;color:red'>" + namesssss + "</font>获得了：" + id + "<br/>";
+						$("#choujiangjieguo").append(html);
+					}
+					//					$("#choujiangjieguo").append("<div style='color:red; font-size:25px;margin-top:15px;'>恭喜获得本次抽奖的大佬们，明天8点我们不见不散。</div><br/>");
+					//					$("#choujiangjieguo").append("<div style='color:red; font-size:25px;margin-top:15px;'> 一个推广群5元现金卷一个。 <br/>  累计5个群：传世一件。  <br/>   累计20个群：传世一套。  <br/>    累计50个群：传世套 + 逆天宝宝或者神配饰。 <br/>     现金卷可兑换一切物资。</div>");
+					//					$("#choujiangjieguo").append("<div style='margin-bottom:50px;'>  <font style='color:red;font-size:30px;'>群号:240568406</font>  盖章：<img src='img/huoli.jpg' width='80px' height='80px'></div>");
+					$("#choujiangjieguo").append("<div style='color:red; font-size:25px;margin-top:15px;'>恭喜获得本次抽奖的大佬们。<br/>今天是<img src=\"img/huangguan.png\" width=\"32\" height=\"32\" />小G生日<img src=\"img/huangguan(1).png\" width=\"32\" height=\"32\" />，以上给大家送来的福利，祝大家玩得开心。</div><br/>");
+					$("#choujiangjieguo").append("<div style='color:red; font-size:25px;margin-top:15px;'> 一个推广群5元现金卷一个。 <br/>  累计5个群：传世一件。  <br/>   累计20个群：传世一套。  <br/>    累计50个群：传世套 + 逆天宝宝或者神配饰。 <br/>     现金卷可兑换一切物资。</div>");
+					$("#choujiangjieguo").append("<div style='margin-bottom:50px;'>  <font style='color:red;font-size:30px;'>群号:240568406</font>  盖章：<img src='img/huoli.jpg' width='80px' height='80px'></div>");
+
+				});
+				//添加抽奖人
+				var data = "[";
+				$("#add").click(function() {
+					var name = $("#addname").val();
+					if(name == null || name == "") {
+						return;
+					}
+					count = count + 1;
+					$("#addpeople").append("<div><input type='checkbox' name='select' checked value='" + name + "'/>" + name + "<div>");
+				});
+				//保存本次抽奖人
+				$("#save").click(function() {
+					var saves = $("input[type='checkbox']");
+					for(var j = 0; j < saves.length; j++) {
+						data += "{\"name\":\"" + saves[j].value + "\"},";
+					}
+					export_raw("json1.json", data.substring(0, data.length - 1) + "]");
+					alert("保存完成后请将下载下来的json1.json文件替换掉源文件里面的");
+				});
+				//清除选中的抽奖人
+				$("#resestpeople").click(function() {
+					var saves = $("[name=select]:checkbox:checked");
+					for(var j = 0; j < saves.length; j++) {
+						$(saves[j]).parent().remove();
+					}
+				})
+				//全选
+				$("#ALL").click(function() {
+
+					$("[name=select]:checkbox").prop("checked", true);
+				});
+				//反选
+				$("#CancleAll").click(function() {
+
+					$("[name=select]:checkbox").prop("checked", false);
+				});
+				$("#BlockPeople").click(function() {
+					if(this.innerHTML.trim() == "隐藏抽奖人") {
+						$("#addpeople").hide();
+						this.innerHTML = "显示抽奖人";
+					} else {
+						$("#addpeople").show();
+						this.innerHTML = "隐藏抽奖人";
+					}
+				})
+				$("#timeup").click(function() {
+					//					$("#smtitle").html("火力公益服抽奖（第" + $("#addname").val() + "期）");
+					//					$("#title").html("走过路过不要错过,火力公益服抽奖（第" + $("#addname").val() + "期）。");
+					//					$("#titleplay").html("第" + $("#addname").val() + "期火力公益抽奖公布");
+					$("#smtitle").html("火力公益服特殊抽奖<img src=\"img/huangguan.png\" width=\"32\" height=\"32\" />小G生日<img src=\"img/huangguan(1).png\" width=\"32\" height=\"32\" />必爆终极<img src = \"img/生日.png\" />");
+					$("#title").html("火力公益服特殊抽奖<img src=\"img/huangguan.png\" width=\"32\" height=\"32\" />小G生日<img src=\"img/huangguan(1).png\" width=\"32\" height=\"32\" />必爆终极<img src = \"img/生日.png\" />");
+					$("#titleplay").html("火力公益服特殊抽奖<img src=\"img/huangguan.png\" width=\"32\" height=\"32\" />小G生日<img src=\"img/huangguan(1).png\" width=\"32\" height=\"32\" />必爆终极 公布结果<img src = \"img/生日.png\" />");
+
+				});
+
+			})
+
+			function fake_click(obj) {
+				var ev = document.createEvent("MouseEvents");
+				ev.initMouseEvent(
+					"click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null
+				);
+				obj.dispatchEvent(ev);
+			}
+
+			//name-文件名；data-要保存的字符串。
+			function export_raw(name, data) {
+				var urlObject = window.URL || window.webkitURL || window;
+				var export_blob = new Blob([data]);
+				var save_link = document.createElementNS("http://www.w3.org/1999/xhtml", "a");
+				save_link.href = urlObject.createObjectURL(export_blob);
+				save_link.download = name;
+				fake_click(save_link);
+			}
+
+			function aa() {
+				var pArr = [1, 4, 2, 3];
+
+				var gifts = [{
+						"id": 2,
+						"name": "神宝宝一只",
+						"prop": 30
+					},
+					{
+						"id": 1,
+						"name": "神级武器",
+						"prop": 30
+					}, {
+						"id": 1,
+						"name": "上古武器",
+						"prop": 30
+					},
+					{
+						"id": 1,
+						"name": "传世装备一套（任选）",
+						"prop": 100
+					},
+					{
+						"id": 1,
+						"name": "护身符",
+						"prop": 30
+					},
+					{
+						"id": 1,
+						"name": "牛逼神兵（任选）",
+						"prop": 30
+					},
+					{
+						"id": 1,
+						"name": "100元现金券",
+						"prop": 200
+					}
+				];
+				var gArr = [];
+				for(var i = 0; i < gifts.length; i++) {
+					gArr.push(gifts[i]['prop'])
+				}
+				return(gifts[getResult(gArr)]['name']);
+			}
+		</script>
+		<div style="width:100%;">
+			<div id="title" style="color:orangered;font-size:25px;margin-bottom:10px;font-weight:400">
+				火力公益服特殊抽奖（小G生日）必爆终极
+			</div>
+			<div id="titleplay" style="display:none">
+				火力公益服特殊抽奖（小G生日）必爆终极 公布结果
+			</div>
+			<button id="statr">
+            开始抽奖
+        </button>
+			<button id="add">
+            添加
+        </button>
+			<input id="addname" type="text" value="" />
+			<button id="resestpeople">
+            清空选中抽奖人
+        </button>
+			<button id="save">
+            保存本次抽奖人
+        </button>
+			<button id="ALL">
+            全选
+        </button>
+			<button id="CancleAll">
+            取消全选
+        </button>
+			<button id="timeup">
+            期数修改
+        </button>
+			<button id="BlockPeople">
+            隐藏抽奖人
+        </button>
+			<button id="jt" onclick="downloadForJS()">
+            抽奖结果截图
+        </button>
+			<div style="margin-top:50px;">
+				<div id="addpeople" style="float:left;">
+				</div>
+				<div style="float:right; " id="asb">
+					<div style="color:orangered;font-size:25px;margin-bottom:10px;font-weight:400" id="smtitle"><img src="img/生日.png" />火力公益服特殊抽奖<img src="img/huangguan.png" width="25" height="25" />(小G生日)<img src="img/huangguan(1).png" width="25" height="25" />必爆终极<img src="img/生日.png" /></div><br />
+					<div id="choujiangjieguo1" style="float:left"><img src="img/shengri.jpg" width="200" height="200" />
+					<br/><img src="img/shengri.jpg" width="200" height="200" />
+					</div>
+					<div id="choujiangjieguo" style="float:left"></div>
+					<div id="choujiangjieguo" style="float:right">
+						<img src="img/meihuling.png" width="200" height="200" /><br />
+						<img src="img/nanren.jpg" width="200" height="200" /><br /><img src="img/zunshen.jpg" width="200" height="200" /><br /><img src="img/wutianji.jpg" width="200" height="200" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
