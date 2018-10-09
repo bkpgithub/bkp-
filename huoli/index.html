@@ -1,4 +1,5 @@
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <title>火力西游(公益)网站</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -11,27 +12,6 @@
     <script src="js/mousewheel.js"></script>
     <script src="js/load.js"></script>
     <script src="js/index.js"></script>
-    <script>
-                    function IsPC() {
-                        var userAgentInfo = navigator.userAgent;
-                        var Agents = ["Android", "iPhone",
-                            "SymbianOS", "Windows Phone",
-                            "iPad", "iPod"];
-                        var flag = true;
-                        for (var v = 0; v < Agents.length; v++) {
-                            if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                                flag = false;
-                                break;
-                            }
-                        }
-                        return flag;
-                    }
-                    var flag = IsPC();
-                    if (flag == false) {
-                        $("jiaqun").attr("href", "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=240568406&card_type=group&source=qrcode");
-                    }
-                   
-                </script>
     <style type='text/css'>
         * {
             margin: 0;
@@ -48,7 +28,8 @@
         }
 
         #wrap {
-            width: 230px; /*133:200  4:6  */
+            width: 230px;
+            /*133:200  4:6  */
             height: 220px;
             margin: 0 auto;
             position: relative;
@@ -57,28 +38,29 @@
             transform: rotateX(-10deg) rotateY(0deg);
         }
 
-            #wrap img {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                border-radius: 1px;
-                transform: rotateY(0deg) translateZ(0px);
-                /*倒影：朝向 偏移 遮盖*/ /*线性渐变(从哪里开始,开始时候的颜色,结束时候的颜色)*/
-                -webkit-box-reflect: below 5px -webkit-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,0.5) 100%);
-            }
+        #wrap img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 1px;
+            transform: rotateY(0deg) translateZ(0px);
+            /*倒影：朝向 偏移 遮盖*/
+            /*线性渐变(从哪里开始,开始时候的颜色,结束时候的颜色)*/
+            -webkit-box-reflect: below 5px -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 100%);
+        }
 
-            #wrap p {
-                width: 1200px;
-                height: 1200px;
-                background: -webkit-radial-gradient(center center,600px 600px,rgba(244,23,234,0.2),rgba(0,0,0,0));
-                border-radius: 100%;
-                position: absolute;
-                left: 50%;
-                top: 102%;
-                margin-left: -600px;
-                margin-top: -600px;
-                transform: rotateX(90deg);
-            }
+        #wrap p {
+            width: 1200px;
+            height: 1200px;
+            background: -webkit-radial-gradient(center center, 600px 600px, rgba(244, 23, 234, 0.2), rgba(0, 0, 0, 0));
+            border-radius: 100%;
+            position: absolute;
+            left: 50%;
+            top: 102%;
+            margin-left: -600px;
+            margin-top: -600px;
+            transform: rotateX(90deg);
+        }
     </style>
     <script>
         window.onload = function () {
@@ -167,21 +149,25 @@
     </script>
 
 </head>
+
 <body style="">
-    <div class="musicbox musicplay" style="z-index:333333"><audio autoplay="" loop="" id="audio" src="666.mp3"> 您的浏览器不支持 audio 元素 请切换为极速模式。 </audio></div>
+    <div class="musicbox musicplay" style="z-index:333333"><audio autoplay="" loop="" id="audio" src="666.mp3">
+            您的浏览器不支持 audio 元素 请切换为极速模式。 </audio></div>
     <script>
-<!--
-        document.write(unescape("%3Cscript%3Evar%20CopyRightcss%20%3D%20%22Top/css/cptop.css%22%3B%3C/script%3E%0A%3Cscript%20src%3D%22Top/js/CopyTop.js%22%20charset%3D%22utf-8%22%3E%3C/script%3E"));
+            < !--
+            document.write(unescape("%3Cscript%3Evar%20CopyRightcss%20%3D%20%22Top/css/cptop.css%22%3B%3C/script%3E%0A%3Cscript%20src%3D%22Top/js/CopyTop.js%22%20charset%3D%22utf-8%22%3E%3C/script%3E"));
         //-->
     </script>
     <script>var CopyRightcss = "Top/css/cptop.css";</script>
     <script src="Top/js/CopyTop.js" charset="utf-8"></script>
-    <link rel="stylesheet" type="text/css" href="Top/css/cptop.css"><div id="header" class="clearfix">
-    <div class="top_logo"></div> <div class="warp">
-        <div id="demo"><img src="Top/images/1390.gif" width="1000"></div>
+    <link rel="stylesheet" type="text/css" href="Top/css/cptop.css">
+    <div id="header" class="clearfix">
+        <div class="top_logo"></div>
+        <div class="warp">
+            <div id="demo"><img src="Top/images/1390.gif" width="1000"></div>
 
-    </div>
-    <!--</div><div id="Version">
+        </div>
+        <!--</div><div id="Version">
         <div id="Header">
             <img src="Top/images/bg_01.jpg" width="1920"><img src="Top/images/bg_02.jpg" width="1920"><img src="Top/images/bg_03.jpg" width="1920">
             <img src="Top/images/bg_04.jpg" width="1920"><img src="Top/images/bg_05.jpg" width="1920">
@@ -192,395 +178,443 @@
         </div>
 
     </div>-->
-    <div id='wrap' style="z-index:9999999999999;margin-bottom:500px">
-        <img src="img/shupin1.png" />
-        <img src="img/shupin2.png" />
-        <img src="img/shupin3.jpg" />
-        <img src="img/shupin4.png" />
-        <img src="img/shupin5.png" />
-        <img src="img/shupin6.png" />
-        <img src="img/shupin7.png" />
-        <img src="img/shupin8.png" />
-        <img src="img/shupin9.png" />
-        <p></p>
-    </div>
+        <div id='wrap' style="z-index:9999999999999;margin-bottom:500px">
+            <img src="img/shupin1.png" />
+            <img src="img/shupin2.png" />
+            <img src="img/shupin3.jpg" />
+            <img src="img/shupin4.png" />
+            <img src="img/shupin5.png" />
+            <img src="img/shupin6.png" />
+            <img src="img/shupin7.png" />
+            <img src="img/shupin8.png" />
+            <img src="img/shupin9.png" />
+            <p></p>
+        </div>
 
 
-    <div class="m1">
+        <div class="m1">
 
-        <div class="recommended clearfix" style="width:92%">
-            <div style="padding-top:10px;padding-left:0.8%">
-                <img src="Top/images/火力西游公益.gif" id="aijquery" style="z-index:999999999" width="268" />
-                <img src="Top/images/火力西游公益.gif" id="aijquery" style="z-index:999999999" width="268" />
-                <img src="Top/images/火力西游公益.gif" id="aijquery" style="z-index:999999999" width="268" />
-            </div>
-            <iframe style="display:none;" src="http://shang.qq.com/wpa/qunwpa?idkey=7c772c5ff2198727ace99d60d4ad47b8ff9dd42471332f10a4c87aff521a0561"></iframe>
-            <div class="recomm">
-               <!-- <h3 class="tit">火力西游(公益)网站推荐新区预告</h3>-->
+            <div class="recommended clearfix" style="width:92%">
+                <div style="padding-top:10px;padding-left:0.8%">
+                    <img src="Top/images/火力西游公益.gif" id="aijquery" style="z-index:999999999" width="268" />
+                    <img src="Top/images/火力西游公益.gif" id="aijquery" style="z-index:999999999" width="268" />
+                    <img src="Top/images/火力西游公益.gif" id="aijquery" style="z-index:999999999" width="268" />
+                </div>
+                <iframe style="display:none;" src="http://shang.qq.com/wpa/qunwpa?idkey=7c772c5ff2198727ace99d60d4ad47b8ff9dd42471332f10a4c87aff521a0561"></iframe>
+                <div class="recomm">
+                    <!-- <h3 class="tit">火力西游(公益)网站推荐新区预告</h3>-->
 
-            </div>
+                </div>
 
-            <!--推荐服务器 -->
-            <a href="javascript:void(0)" target="_blank" class="start" title="登录器下载">开始游戏</a>
-            <p class="act" style="padding-top:10px; margin-left:8.8%">
+                <!--推荐服务器 -->
+                <a href="javascript:void(0)" target="_blank" class="start" title="登录器下载">开始游戏</a>
+                <p class="act" style="padding-top:10px; margin-left:8.8%">
 
-                <!--<a href="javascript:void(0)" class="all_btn a3" target="_blank">在线抽奖</a>
+                    <!--<a href="javascript:void(0)" class="all_btn a3" target="_blank">在线抽奖</a>
                 <a href="javascript：void(0)" class="all_btn a2" target="_blank">网盘下载</a>
                 <a href="javascript:void(0)" class="all_btn a1" target="_blank">登陆器下载</a>-->
 
-            </p>
+                </p>
 
 
-            <!--开始游戏按钮 -->
-        </div>
-        <!--推荐服务器end-->
-        <!--介绍、轮播图-->
-        <div class="newsC clearfix">
+                <!--开始游戏按钮 -->
+            </div>
+            <!--推荐服务器end-->
+            <!--介绍、轮播图-->
+            <div class="newsC clearfix">
 
-            <div class="news">
+                <div class="news">
 
-                <section id="Introduction">
-                    <ul class="Tab">
-                        <li class="change"> <a href="#">游戏介绍</a></li>
-                    </ul>
-                    <span class="clear"></span>
-                    <div class="Tab_nr">
-                        <div class="container1" style="width:820px">
-                            <div class="div_scroll" style="height: 362px; overflow: hidden; padding: 0px; width: 820px;">
-                                <div class="scroll_container" style="width: 820px; height: 362px;">
-                                    <div class="scroll_absolute" style="padding: 0px; top: 0px; left: 0px; width: 820px;">
-                                        <div class="Scroll_box" data-scroll="1" data-scroll-height="362" data-scroll-width="820" style="width: 100%;">
+                    <section id="Introduction">
+                        <ul class="Tab">
+                            <li class="change"> <a href="#">游戏介绍</a></li>
+                        </ul>
+                        <span class="clear"></span>
+                        <div class="Tab_nr">
+                            <div class="container1" style="width:820px">
+                                <div class="div_scroll" style="height: 362px; overflow: hidden; padding: 0px; width: 820px;">
+                                    <div class="scroll_container" style="width: 820px; height: 362px;">
+                                        <div class="scroll_absolute" style="padding: 0px; top: 0px; left: 0px; width: 820px;">
+                                            <div class="Scroll_box" data-scroll="1" data-scroll-height="362"
+                                                data-scroll-width="820" style="width: 100%;">
 
-                                            <ul class="NewsList" style="font-size:16px;">
-                                                <li>火力西游（公益）超变,不为赚钱，只为装逼。散人不充钱，也能成神。</li>
-                                                <li>①.装备好打，上线无线点卡，无限资源，随便嗨。</li>
-                                                <li>②.刮刮卡：定制宝宝，顶级配饰，千元礼包拿不停。不会抽到垃圾物品！</li>
-                                                <li>③.本服为干净服，不会爆垃圾！！！</li>
-                                                <li>④.说的再牛逼，都不如来试一试，爆不爆试了才知道。</li>
-                                                <li>⑤.群：240568406</li>
-                                            </ul>
+                                                <ul class="NewsList" style="font-size:16px;">
+                                                    <li>火力西游（公益）超变,不为赚钱，只为装逼。散人不充钱，也能成神。</li>
+                                                    <li>①.装备好打，上线无线点卡，无限资源，随便嗨。</li>
+                                                    <li>②.刮刮卡：定制宝宝，顶级配饰，千元礼包拿不停。不会抽到垃圾物品！</li>
+                                                    <li>③.本服为干净服，不会爆垃圾！！！</li>
+                                                    <li>④.说的再牛逼，都不如来试一试，爆不爆试了才知道。</li>
+                                                    <li>⑤.群：240568406</li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- .Tab_nr结束 -->
-                    <span class="clear"></span>
-                    <span class="yuan_01"></span>
-                    <span class="yuan_02"></span>
-                    <span class="yuan_03"></span>
-                    <span class="yuan_04"></span>
-                </section>
-                <!-- Introduction结束 -->
+                        <!-- .Tab_nr结束 -->
+                        <span class="clear"></span>
+                        <span class="yuan_01"></span>
+                        <span class="yuan_02"></span>
+                        <span class="yuan_03"></span>
+                        <span class="yuan_04"></span>
+                    </section>
+                    <!-- Introduction结束 -->
+                </div>
             </div>
         </div>
-    </div>
-    <!--m3-->
-    <div class="m3">
-        <!--一行1张图  图片宽度1140px 高度自适应-->
-        <div class="m3_div">
-            <div class="www_187zg_zb boxstyle">
+        <!--m3-->
+        <div class="m3">
+            <!--一行1张图  图片宽度1140px 高度自适应-->
+            <div class="m3_div">
+                <div class="www_187zg_zb boxstyle">
 
-                <div class="www_187zg_zb_1">
-                    <div class="www_187zg_zb_1_t">
-                        <div align="center">火力西游（公益）-装备好爆-不为赚钱-只为装逼</div>
-                    </div>
-                    <div class="role-itemst">
-                        <div align="center">
-                            <p>&nbsp;</p>
-                            <table width="1150" border="0" cellspacing="10" bordercolor="#0099FF">
-                                <tbody>
-                                    <tr>
-                                        <td><div align="center"><img src="images/hengping1.jpg"></div></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="www_187zg_zb_1">
+                        <div class="www_187zg_zb_1_t">
+                            <div align="center">火力西游（公益）-装备好爆-不为赚钱-只为装逼</div>
                         </div>
-                    </div>
-                    <div class="www_187zg_zb_1_d"></div>
-                </div>
-
-            </div>
-        </div>
-
-        <div align="center">
-
-        </div>
-
-        <!--一行1张图  图片宽度1140px 高度自适应-->
-        <div class="m3_div">
-            <div class="www_187zg_zb boxstyle">
-
-                <div class="www_187zg_zb_1">
-                    <div class="www_187zg_zb_1_t">
-                        <div align="center">火力西游（公益）-装备好爆-不为赚钱-只为装逼</div>
-                    </div>
-                    <div class="role-itemst">
-                        <div align="center">
-                            <p>&nbsp;</p>
-                            <table width="1150" border="0" cellspacing="10" bordercolor="#0099FF">
-                                <tbody>
-                                    <tr>
-                                        <td><div align="center"><img src="images/hengping2.jpg"></div></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="role-itemst">
+                            <div align="center">
+                                <p>&nbsp;</p>
+                                <table width="1150" border="0" cellspacing="10" bordercolor="#0099FF">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div align="center"><img src="images/hengping1.jpg"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
+                        <div class="www_187zg_zb_1_d"></div>
                     </div>
-                    <div class="www_187zg_zb_1_d"></div>
+
                 </div>
+            </div>
+
+            <div align="center">
 
             </div>
-        </div>
 
-        <div align="center">
+            <!--一行1张图  图片宽度1140px 高度自适应-->
+            <div class="m3_div">
+                <div class="www_187zg_zb boxstyle">
 
-        </div>
-
-        <!--一行1张图  图片宽度1140px 高度自适应-->
-        <!--一行1张图  图片宽度1140px 高度自适应-->
-        <div class="m3_div">
-            <div class="www_187zg_zb boxstyle">
-
-                <div class="www_187zg_zb_1">
-                    <div class="www_187zg_zb_1_t">
-                        <div align="center">火力西游（公益）-装备好爆-不为赚钱-只为装逼</div>
-                    </div>
-                    <div class="role-itemst">
-                        <div align="center">
-                            <p>&nbsp;</p>
-                            <table width="1150" border="0" cellspacing="10" bordercolor="#0099FF">
-                                <tbody>
-                                    <tr>
-                                        <td><div align="center"><img src="images/hengping3.jpg"></div></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="www_187zg_zb_1">
+                        <div class="www_187zg_zb_1_t">
+                            <div align="center">火力西游（公益）-装备好爆-不为赚钱-只为装逼</div>
                         </div>
-                    </div>
-                    <div class="www_187zg_zb_1_d"></div>
-                </div>
-
-            </div>
-        </div>
-
-        <div align="center">
-
-        </div>
-        <!--一行1张图  图片宽度1140px 高度自适应-->
-        <div class="m3_div">
-            <div class="www_187zg_zb boxstyle">
-
-                <div class="www_187zg_zb_1">
-                    <div class="www_187zg_zb_1_t">
-                        <div align="center">火力西游（公益）-装备好爆-不为赚钱-只为装逼</div>
-                    </div>
-                    <div class="role-itemst">
-                        <div align="center">
-                            <p>&nbsp;</p>
-                            <table width="1150" border="0" cellspacing="10" bordercolor="#0099FF">
-                                <tbody>
-                                    <tr>
-                                        <td><div align="center"><img src="images/hengping4.jpg"></div></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="role-itemst">
+                            <div align="center">
+                                <p>&nbsp;</p>
+                                <table width="1150" border="0" cellspacing="10" bordercolor="#0099FF">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div align="center"><img src="images/hengping2.jpg"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
+                        <div class="www_187zg_zb_1_d"></div>
                     </div>
-                    <div class="www_187zg_zb_1_d"></div>
+
                 </div>
+            </div>
+
+            <div align="center">
 
             </div>
-        </div>
 
-        <div align="center">
+            <!--一行1张图  图片宽度1140px 高度自适应-->
+            <!--一行1张图  图片宽度1140px 高度自适应-->
+            <div class="m3_div">
+                <div class="www_187zg_zb boxstyle">
 
-        </div>
-        <!--一行1张图  图片宽度1140px 高度自适应-->
-        <div class="m3_div">
-            <div class="www_187zg_zb boxstyle">
-
-                <div class="www_187zg_zb_1">
-                    <div class="www_187zg_zb_1_t">
-                        <div align="center">火力西游（公益）-装备好爆-不为赚钱-只为装逼</div>
-                    </div>
-                    <div class="role-itemst">
-                        <div align="center">
-                            <p>&nbsp;</p>
-                            <table width="1150" border="0" cellspacing="10" bordercolor="#0099FF">
-                                <tbody>
-                                    <tr>
-                                        <td><div align="center"><img src="images/hengping5.jpg"></div></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="www_187zg_zb_1">
+                        <div class="www_187zg_zb_1_t">
+                            <div align="center">火力西游（公益）-装备好爆-不为赚钱-只为装逼</div>
                         </div>
-                    </div>
-                    <div class="www_187zg_zb_1_d"></div>
-                </div>
-
-            </div>
-        </div>
-
-        <div align="center">
-
-        </div>
-        <!--一行1张图  图片宽度1140px 高度自适应-->
-        <div class="m3_div">
-            <div class="www_187zg_zb boxstyle">
-
-                <div class="www_187zg_zb_1">
-                    <div class="www_187zg_zb_1_t">
-                        <div align="center">火力西游（公益）-装备好爆-不为赚钱-只为装逼</div>
-                    </div>
-                    <div class="role-itemst">
-                        <div align="center">
-                            <p>&nbsp;</p>
-                            <table width="1150" border="0" cellspacing="10" bordercolor="#0099FF">
-                                <tbody>
-                                    <tr>
-                                        <td><div align="center"><img src="images/hengping2.jpg"></div></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="role-itemst">
+                            <div align="center">
+                                <p>&nbsp;</p>
+                                <table width="1150" border="0" cellspacing="10" bordercolor="#0099FF">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div align="center"><img src="images/hengping3.jpg"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
+                        <div class="www_187zg_zb_1_d"></div>
                     </div>
-                    <div class="www_187zg_zb_1_d"></div>
+
                 </div>
+            </div>
+
+            <div align="center">
 
             </div>
-        </div>
+            <!--一行1张图  图片宽度1140px 高度自适应-->
+            <div class="m3_div">
+                <div class="www_187zg_zb boxstyle">
 
-        <div align="center">
-
-        </div>
-        <!--一行1张图  图片宽度1140px 高度自适应-->
-        <div class="m3_div">
-            <div class="www_187zg_zb boxstyle">
-
-                <div class="www_187zg_zb_1">
-                    <div class="www_187zg_zb_1_t">
-                        <div align="center">火力西游（公益）-装备好爆-不为赚钱-只为装逼</div>
-                    </div>
-                    <div class="role-itemst">
-                        <div align="center">
-                            <p>&nbsp;</p>
-                            <table width="1150" border="0" cellspacing="10" bordercolor="#0099FF">
-                                <tbody>
-                                    <tr>
-                                        <td><div align="center"><img src="images/hengping3.jpg"></div></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="www_187zg_zb_1">
+                        <div class="www_187zg_zb_1_t">
+                            <div align="center">火力西游（公益）-装备好爆-不为赚钱-只为装逼</div>
                         </div>
-                    </div>
-                    <div class="www_187zg_zb_1_d"></div>
-                </div>
-
-            </div>
-        </div>
-
-        <div align="center">
-
-        </div>
-        <!--一行1张图  图片宽度1140px 高度自适应-->
-        <div class="m3_div">
-            <div class="www_187zg_zb boxstyle">
-
-                <div class="www_187zg_zb_1">
-                    <div class="www_187zg_zb_1_t">
-                        <div align="center">火力西游（公益）-装备好爆-不为赚钱-只为装逼</div>
-                    </div>
-                    <div class="role-itemst">
-                        <div align="center">
-                            <p>&nbsp;</p>
-                            <table width="1150" border="0" cellspacing="10" bordercolor="#0099FF">
-                                <tbody>
-                                    <tr>
-                                        <td><div align="center"><img src="images/hengping4.jpg"></div></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="role-itemst">
+                            <div align="center">
+                                <p>&nbsp;</p>
+                                <table width="1150" border="0" cellspacing="10" bordercolor="#0099FF">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div align="center"><img src="images/hengping4.jpg"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
+                        <div class="www_187zg_zb_1_d"></div>
                     </div>
-                    <div class="www_187zg_zb_1_d"></div>
-                </div>
-
-            </div>
-        </div>
-
-        <div align="center">
-
-        </div>
-
-
-
-
-
-    </div>
-
-
-    <div id="Floatingbar">
-
-        <ul>
-            <li><a href="tencent://message/?uin=670396346&amp;Site=&amp;menu=yes" target="_blank"><span>01</span> 在线客服</a></li>
-            <li><a href="tencent://message/?uin=670396346&amp;Site=&amp;menu=yes" " target="_blank"><span>02</span> 在线担保</a></li>
-            <li><a href="tencent://message/?uin=670396346&amp;Site=&amp;menu=yes" " target="_blank"><span>03</span> 在线技术</a></li>
-            <li><a href="http://shang.qq.com/wpa/qunwpa?idkey=7c772c5ff2198727ace99d60d4ad47b8ff9dd42471332f10a4c87aff521a0561" target="_blank"><span>04</span> 登录器下载</a></li>
-            <li><a href="http://shang.qq.com/wpa/qunwpa?idkey=7c772c5ff2198727ace99d60d4ad47b8ff9dd42471332f10a4c87aff521a0561" target="_blank"><span>05</span> 加群下载</a></li>
-            <li><a href="http://shang.qq.com/wpa/qunwpa?idkey=7c772c5ff2198727ace99d60d4ad47b8ff9dd42471332f10a4c87aff521a0561" target="_blank"><span>06</span> 官方QQ群</a></li>
-        </ul>
-
-        <a href="#" class="btn_backtop">TOP</a>
-        <span class="btn_">收起</span>
-    </div>
-    <!-- Floatingbar结束 -->
-
-    <footer>
-        <script>var CopyRightcss = "css/black.css";</script>
-        <script src="js/cqCopyRight.js" charset="gb2312"></script><link rel="stylesheet" type="text/css" href="css/black.css"><div class="SDGCOPYRIGHT-wrap20130425">
-            <div id="SDGCOPYRIGHT">
-                <div class="SDGCOPYRIGHT-logo" style="width:200px;"></div>
-                <div class="SDGCOPYRIGHT-con">
-                    <p>
-                        <span class="SDGCOPYRIGHT-pr3">抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</span>
-                    </p>
-                    <p>
-                        <span class="SDGCOPYRIGHT-pr3">All rights reserved. 火力西游（公益）  版权所有 本游戏由【火力西游（公益）】开发运营 版本持续更新给您更多惊喜</span>
-                    </p>
-                </div>
-                <div class="SDGCOPYRIGHT-priv">
-                    <a href="#" class="SDGCOPYRIGHT-priv1" target="_blank">网络警察</a>
 
                 </div>
             </div>
+
+            <div align="center">
+
+            </div>
+            <!--一行1张图  图片宽度1140px 高度自适应-->
+            <div class="m3_div">
+                <div class="www_187zg_zb boxstyle">
+
+                    <div class="www_187zg_zb_1">
+                        <div class="www_187zg_zb_1_t">
+                            <div align="center">火力西游（公益）-装备好爆-不为赚钱-只为装逼</div>
+                        </div>
+                        <div class="role-itemst">
+                            <div align="center">
+                                <p>&nbsp;</p>
+                                <table width="1150" border="0" cellspacing="10" bordercolor="#0099FF">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div align="center"><img src="images/hengping5.jpg"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="www_187zg_zb_1_d"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div align="center">
+
+            </div>
+            <!--一行1张图  图片宽度1140px 高度自适应-->
+            <div class="m3_div">
+                <div class="www_187zg_zb boxstyle">
+
+                    <div class="www_187zg_zb_1">
+                        <div class="www_187zg_zb_1_t">
+                            <div align="center">火力西游（公益）-装备好爆-不为赚钱-只为装逼</div>
+                        </div>
+                        <div class="role-itemst">
+                            <div align="center">
+                                <p>&nbsp;</p>
+                                <table width="1150" border="0" cellspacing="10" bordercolor="#0099FF">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div align="center"><img src="images/hengping2.jpg"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="www_187zg_zb_1_d"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div align="center">
+
+            </div>
+            <!--一行1张图  图片宽度1140px 高度自适应-->
+            <div class="m3_div">
+                <div class="www_187zg_zb boxstyle">
+
+                    <div class="www_187zg_zb_1">
+                        <div class="www_187zg_zb_1_t">
+                            <div align="center">火力西游（公益）-装备好爆-不为赚钱-只为装逼</div>
+                        </div>
+                        <div class="role-itemst">
+                            <div align="center">
+                                <p>&nbsp;</p>
+                                <table width="1150" border="0" cellspacing="10" bordercolor="#0099FF">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div align="center"><img src="images/hengping3.jpg"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="www_187zg_zb_1_d"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div align="center">
+
+            </div>
+            <!--一行1张图  图片宽度1140px 高度自适应-->
+            <div class="m3_div">
+                <div class="www_187zg_zb boxstyle">
+
+                    <div class="www_187zg_zb_1">
+                        <div class="www_187zg_zb_1_t">
+                            <div align="center">火力西游（公益）-装备好爆-不为赚钱-只为装逼</div>
+                        </div>
+                        <div class="role-itemst">
+                            <div align="center">
+                                <p>&nbsp;</p>
+                                <table width="1150" border="0" cellspacing="10" bordercolor="#0099FF">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div align="center"><img src="images/hengping4.jpg"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="www_187zg_zb_1_d"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div align="center">
+
+            </div>
+
+
+
+
+
         </div>
-    </footer>
-    <script type="text/javascript">
-        /****mp3---*/
-        var Setting = {
-            scrollSpeed: 2,
 
-        };
-        $(function () {
-            var bBtn = true;
-            var musicMp3 = document.getElementById("audio");
-            var bBtn = true;
-            $('.musicbox').on('click', function () {
-                if (bBtn) {
-                    $(this).removeClass('musicplay').addClass('musicstop');
-                    bBtn = false;
-                    musicMp3.pause();
-                } else {
 
-                    $(this).removeClass('musicstop').addClass('musicplay');
-                    bBtn = true;
-                    musicMp3.play();
+        <div id="Floatingbar">
 
-                }
-            });
-        })
-    </script>
+            <ul>
+                <li><a href="tencent://message/?uin=670396346&amp;Site=&amp;menu=yes" target="_blank"><span>01</span>
+                        在线客服</a></li>
+                <li><a href="tencent://message/?uin=670396346&amp;Site=&amp;menu=yes" " target=" _blank"><span>02</span>
+                        在线担保</a></li>
+                <li><a href="tencent://message/?uin=670396346&amp;Site=&amp;menu=yes" " target=" _blank"><span>03</span>
+                        在线技术</a></li>
+                <li><a href="http://shang.qq.com/wpa/qunwpa?idkey=7c772c5ff2198727ace99d60d4ad47b8ff9dd42471332f10a4c87aff521a0561"
+                        target="_blank" name="jiaqun"><span>04</span> 登录器下载</a></li>
+                <script>
+                    function IsPC() {
+                        var userAgentInfo = navigator.userAgent;
+                        var Agents = ["Android", "iPhone",
+                            "SymbianOS", "Windows Phone",
+                            "iPad", "iPod"];
+                        var flag = true;
+                        for (var v = 0; v < Agents.length; v++) {
+                            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                                flag = false;
+                                break;
+                            }
+                        }
+                        return flag;
+                    }
+                    var flag = IsPC();
+                    if (flag == false) {
+                        $("jiaqun").attr("href", "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=240568406&card_type=group&source=qrcode");
+                    }
+                   
+                </script>
+                <li><a href="http://shang.qq.com/wpa/qunwpa?idkey=7c772c5ff2198727ace99d60d4ad47b8ff9dd42471332f10a4c87aff521a0561"
+                        target="_blank" name="jiaqun"><span>05</span> 加群下载</a></li>
+                <li><a href="http://shang.qq.com/wpa/qunwpa?idkey=7c772c5ff2198727ace99d60d4ad47b8ff9dd42471332f10a4c87aff521a0561"
+                        target="_blank" name="jiaqun"><span>06</span> 官方QQ群</a></li>
+            </ul>
+
+            <a href="#" class="btn_backtop">TOP</a>
+            <span class="btn_">收起</span>
+        </div>
+        <!-- Floatingbar结束 -->
+
+        <footer>
+            <script>var CopyRightcss = "css/black.css";</script>
+            <script src="js/cqCopyRight.js" charset="gb2312"></script>
+            <link rel="stylesheet" type="text/css" href="css/black.css">
+            <div class="SDGCOPYRIGHT-wrap20130425">
+                <div id="SDGCOPYRIGHT">
+                    <div class="SDGCOPYRIGHT-logo" style="width:200px;"></div>
+                    <div class="SDGCOPYRIGHT-con">
+                        <p>
+                            <span class="SDGCOPYRIGHT-pr3">抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</span>
+                        </p>
+                        <p>
+                            <span class="SDGCOPYRIGHT-pr3">All rights reserved. 火力西游（公益） 版权所有 本游戏由【火力西游（公益）】开发运营
+                                版本持续更新给您更多惊喜</span>
+                        </p>
+                    </div>
+                    <div class="SDGCOPYRIGHT-priv">
+                        <a href="#" class="SDGCOPYRIGHT-priv1" target="_blank">网络警察</a>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript">
+            /****mp3---*/
+            var Setting = {
+                scrollSpeed: 2,
+
+            };
+            $(function () {
+                var bBtn = true;
+                var musicMp3 = document.getElementById("audio");
+                var bBtn = true;
+                $('.musicbox').on('click', function () {
+                    if (bBtn) {
+                        $(this).removeClass('musicplay').addClass('musicstop');
+                        bBtn = false;
+                        musicMp3.pause();
+                    } else {
+
+                        $(this).removeClass('musicstop').addClass('musicplay');
+                        bBtn = true;
+                        musicMp3.play();
+
+                    }
+                });
+            })
+        </script>
 </body>
+
 </html>
