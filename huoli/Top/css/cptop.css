@@ -1,0 +1,73 @@
+.fl{float:left}
+.fr{float:right}
+.mt10{margin-left:12px;}
+.ml50{margin-left:50px;}
+.clearfix{zoom:1}
+.warp{width:1200px;margin-left:auto;margin-right:auto;}
+.microHei{font-family:"Microsoft YaHei"}
+#header{background:url(../images/brief_01.jpg) repeat-x;height:61px;padding-top:0;width:100%; position:relative}
+.top_logo { position:fixed; top:0px; left:50%; margin-left:-780px; width:235px; height:235px; background:url(../images/top_logo.png); z-index:1000;}
+#header a.fl{height:65px}
+#header .ban{float:right;width:50px;height:50px;margin-top:10px;filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity:0.5;opacity:0.5;}
+#header #demo{overflow:hidden;height:50px;line-height:50px;width:1000px;color:#d2d2ca;white-space:nowrap;float:left;margin-top:0px;font-size:24px;margin-left:150px;}
+.an_buut{position:fixed;width:235px;height:235px;background:url(../images/logo.png) no-repeat;z-index:10;left:50%;margin-left:-800px;z-index:100000;margin-top:-20px}
+.an_buut img{margin-left:30px;margin-top:10px;}
+
+#Version{width:100%;height:900px;position:relative;overflow:hidden;}
+#Flash{width:1920px;height:900px;position:absolute;left:50%;margin:0px auto -272px -960px;z-index:50;}
+#Header{margin:0 auto -290px -960px;width:1920px;height:900px;position:absolute;left:50%;}
+.hao123{width:260px;height:20px;top:0px;left:50%;margin-left:350px;filter:alpha(opacity=30);-moz-opacity:0.3;-khtml-opacity:0.3;opacity:0.3;position:absolute;z-index:55;}
+
+
+
+.m3{width:100%;height:auto;padding-bottom:10px;}
+.www_187zg_zb{width:1180px;height:auto;overflow:hidden;margin:0 auto;padding:0px 00px 00px 00px;padding-top:00px;margin-top:10px;}
+
+.www_187zg_zb_4{width:285px;height:auto;overflow:hidden;float:left;background:#041421;border:#3b6888 1px solid;position:relative}
+.www_187zg_zb_4_t{width:285px;height:40px;float:left;background:#213f57 url(../images/img03.jpg) repeat;line-height:40px;color:#80bed8;text-align:center;font-size:19px;font-weight:bold; border-bottom:#1c0e0d 1px solid}
+.www_187zg_zb_4_d{width:285px;height:4px;float:left;background:#213f57 repeat;position:relative}
+.www_187zg_zb_4 .role-itemst{width:260px;height:auto;float:left;position:relative;padding:10px;}
+.www_187zg_zb_4 .role-itemst img{width:260px;height:auto;overflow:hidden;display:block;-webkit-transition:all .5s;-moz-transition:all .5s;-ms-transition:all .5s;-o-transition:all .5s;transition:all .5s;padding:5px;}
+.www_187zg_zb_4 .role-itemst img:hover{width:270px;height:auto;-webkit-transition:all .5s;-moz-transition:all .5s;-ms-transition:all .5s;-o-transition:all .5s;transition:all .5s;padding:0px;padding-bottom:4px;}
+
+
+.www_187zg_zb_3{width:384px;height:auto;overflow:hidden;float:left;background:#000 url(../images/www_187zg_zb_3_z.jpg) repeat-y;position:relative}
+.www_187zg_zb_3_t{width:384px;height:40px;float:left;background:#000 url(../images/www_187zg_zb_3_t.jpg) repeat;line-height:50px;color:#fff;text-align:center;font-size:16px;font-weight:bold;}
+.www_187zg_zb_3_d{width:384px;height:40px;float:left;background:#000 url(../images/www_187zg_zb_3_d.jpg) no-repeat;position:relative}
+.www_187zg_zb_3 .role-itemst{width:344px;height:auto;float:left;position:relative;padding:20px;}
+
+
+.www_187zg_zb_2{width:570px;height:auto;overflow:hidden;float:left;background:#000 url(../images/www_187zg_zb_2_z.jpg) repeat-y;border:#000 1px solid}
+.www_187zg_zb_2_t{width:640px;height:40px;float:left;background:#000 url(../images/www_187zg_zb_2_t.jpg) no-repeat;line-height:40px;color:#80bed8;text-align:center;font-size:19px;font-weight:bold;}
+.www_187zg_zb_2_d{width:640px;height:40px;float:left;background:#000 url(../images/www_187zg_zb_2_d.jpg) no-repeat;;position:relative}
+.www_187zg_zb_2 .role-itemst{width:640px;height:auto;float:left;position:relative;padding:10px;}
+.www_187zg_zb_2 .role-itemst img{width:610px;height:auto;overflow:hidden;display:block;-webkit-transition:all .5s;-moz-transition:all .5s;-ms-transition:all .5s;-o-transition:all .5s;transition:all .5s;padding:5px;;border:#30404d 1px solid}
+.www_187zg_zb_2 .role-itemst img:hover{width:610px;height:auto;-webkit-transition:all .5s;-moz-transition:all .5s;-ms-transition:all .5s;-o-transition:all .5s;transition:all .5s;padding:3px;}
+.www_187zg_zb_1{width:1180px;height:auto;overflow:hidden;float:left;background:#000 url(../images/www_187zg_zb_1_z.jpg) repeat-y;}
+.www_187zg_zb_1_t{width:1180px;height:40px;float:left;background:#000  url(../images/www_187zg_zb_1_t.jpg) no-repeat;line-height:40px;color:#80bed8;text-align:center;font-size:19px;font-weight:bold;}
+.www_187zg_zb_1_d{width:1180px;height:40px;float:left;background:#000  url(../images/www_187zg_zb_1_d.jpg) no-repeat;position:relative}
+
+.float_nav{width:210px;height:482px;background:url(../images/spr.png) no-repeat 0 -76px;position:fixed;right:10px;top:50%;margin:-252px 0;padding:50px 0 0;z-index:100000; }
+
+.aa { width:210px; height:34px;  float:left; padding-top:30px; margin:0 auto; }
+
+.float_nav li{height:45px;width:100px;margin:0 auto;padding:0px 0 0;border-bottom:#fff 1px dashed; }
+.float_nav li a{display:block;width:100%;height:50px;line-height:50px;text-align:center;font-size:14px;color:#fff;font-weight:bold}
+.float_nav li a:hover{color:#900;text-decoration:none;}
+#footer_ied{text-align:center;font-size:12px;line-height:19px;font-family:Tahoma;}
+.wrap_ied{margin:0 auto;padding:30px 0;color:#423e39;}
+.wrap_ied p a{color:#900;}
+.wrap_ied p a:hover{color:#eee2d1;}
+#footer_ied p.e{font-size:10px;}
+
+
+
+.side-btn a:hover{transition:all 0.3s linear 0s;-moz-transition:all 0.3s linear 0s;-webkit-transition:all 0.3s linear 0s;-o-transition:all 0.3s linear 0s;}
+.side-btn{width: 190px;}
+.side-btn a{width: 190px;height: 30px;float: left;margin-top:8px;display: inline-block; color:#FFF; font-size:16px; line-height:30px; text-align:center;text-decoration:none}
+.btn-t1{background:#9a6b24;}
+.btn-t1:hover{background:#580704;}
+				
+.musicbox{width:120px;height:93px;position:fixed;z-index:500;top:0px;left:50%;cursor:pointer;margin-left:-750px}
+.musicplay{background:url(../images/musicplay.png) no-repeat}
+.musicstop{background:url(../images/musicstop.png) no-repeat}

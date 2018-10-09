@@ -1,0 +1,67 @@
+/* - - - - - - - - - 各浏览器样式默认值标准化  - - - - - - - - -*/
+html,body,span,object,iframe,h1,h2,h3,h4,h5,p,blockquote,pre,
+a,address,code,
+del,em,img,dl,dt,dd,ol,ul,li,
+fieldset,form,label{
+margin:0;padding:0;border:0;
+font-style:inherit;font-family:inherit;vertical-align:baseline;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,audio,video{margin:0;padding:0;display: block;}
+html{-webkit-text-size-adjust:none;}
+img{border:none;vertical-align:middle;}
+input,select,button{padding:0;margin:0;outline:none;font-family:inherit;vertical-align:middle;}
+textarea{font-family:inherit;padding:0;margin:0;}
+button{cursor:pointer;}
+html{overflow-x:hidden;}
+body{font-size:12px;background:#120f1c url(../images/bg-m-b.jpg) no-repeat center bottom;;font-family:'Microsoft YaHei';}
+ul,ol{list-style-type:none;}
+h1{font-size:24px;}
+h2{font-size:18px;}
+h3,h4{font-size:14px;}
+h5{font-size:12px;}
+i,em,address{font-style:normal;}
+a{ text-decoration:none;color:#4f4f4f;}
+a:hover{text-decoration:underline;transition:color 200ms linear 0s,background-color 200ms linear 0s,border-color 200ms linear 0s;color:#f25149;}
+a:active{}	/*点击与释放时*/
+a:visited{}/* 访问过 */
+/*  - - - - - - - - - 常用类样式  - - - - - - - - -*/
+.photo_fullsize img{display:block;width:100%;height:100%;}	/*图片全尺寸*/
+.no_bor{ border:none!important;}	/*无边框*/
+.no_bg{ background:none!important;}	/*无背景*/
+.clear{ display:block;height:0; line-height:0;overflow:hidden; clear:both;font-size:0;}/*清除浮动*/
+.clear_::after{content:"";display:block; clear:both;height:0; line-height:0; overflow:hidden;}/*清除浮动*/
+.center{margin:0 auto;width:1280px;}	/*让内容区块居中*/
+
+
+
+/*图片全尺寸*/
+.photo,.photo_fullsize{display:block;overflow:hidden;}
+.photo img,.photo_fullsize img{display:block;width:100%;height:100%;}	
+/*图片自适应尺寸*/
+.photo_autosize{text-align:center;display:block; overflow:hidden;}
+.photo_autosize::after{height:100%;width:0;overflow:hidden; font-size:0; line-height:0;display:inline-block;vertical-align:middle;content:"";}
+.photo_autosize img{max-width:100%;max-height:100%;min-width:50%;min-height:50%;}
+/*图片自适应全尺寸*/
+.photo_autofullsize{ overflow:hidden; display:block;background-size:cover!important}
+.photo_autofullsize img{ display:none;}
+.container1{width:617px;height:auto;margin:0 auto;}
+	.container1 .div_scroll{float:left;width:100%;height:289px;overflow:auto;}
+	.container1 .scroll_container{position:relative;overflow:hidden;}
+	.container1 .scroll_absolute{position:absolute;}
+	.container1 .scroll_vertical_bar{width:14px;height:100%;position:absolute;top:0;right:0;margin:0;padding:0;}
+	.container1 .scroll_track{position:relative;border-radius:10px;background:url(../images/line_y.gif) repeat-y center top;}
+	.container1 .scroll_drag{position:relative;top:0;left:0;border-top:none;border-bottom:none;cursor:pointer;background-color:#b7494c;border-radius:20px;}
+	.container1 .scroll_arrow{text-indent:-20000px;cursor:pointer;display:block;}
+
+
+/*窗口*/
+*html{background-image:url(about:blank);background-attachment:fixed;}/*解决IE6下滚动抖动的问题*/
+#window{width:100%;height:100%; position:fixed;top:0;left:0;background: url(../images/heibg2.png) repeat left top;display:none;z-index:100000; _position:absolute;_top:expression(eval(document.documentElement.scrollTop));}
+#float_window{position:absolute;top:50%;left:50%;padding:0px;z-index:20001;box-shadow:0 3px 44px rgba(0,0,0,0.8);}
+#float_window .closewindow{width:52px;background:url(../images/btn_close.png) no-repeat left bottom;height:52px;position:absolute;}
+#float_window .closewindow:hover{background-position:left top;}
+
+
+
+
+
+
