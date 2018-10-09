@@ -575,24 +575,22 @@
                 scrollSpeed: 2,
 
             };
-            function IsPC() {
-                var userAgentInfo = navigator.userAgent;
-                var Agents = ["Android", "iPhone",
-                    "SymbianOS", "Windows Phone",
-                    "iPad", "iPod"];
-                var flag = true;
-                for (var v = 0; v < Agents.length; v++) {
-                    if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                        flag = false;
-                        break;
-                    }
+
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    $(".jiaqun").attr("href", "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=240568406&card_type=group&source=qrcode");
+                    break;
                 }
-                return flag;
             }
-            var flag = IsPC();
-            if (flag == false) {
-                $(".jiaqun").attr("href", "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=240568406&card_type=group&source=qrcode");
-            }
+            return flag;
+
+
             $(function () {
                 var bBtn = true;
                 var musicMp3 = document.getElementById("audio");
