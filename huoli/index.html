@@ -11,6 +11,27 @@
     <script src="js/mousewheel.js"></script>
     <script src="js/load.js"></script>
     <script src="js/index.js"></script>
+    <script>
+                    function IsPC() {
+                        var userAgentInfo = navigator.userAgent;
+                        var Agents = ["Android", "iPhone",
+                            "SymbianOS", "Windows Phone",
+                            "iPad", "iPod"];
+                        var flag = true;
+                        for (var v = 0; v < Agents.length; v++) {
+                            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                                flag = false;
+                                break;
+                            }
+                        }
+                        return flag;
+                    }
+                    var flag = IsPC();
+                    if (flag == false) {
+                        $("jiaqun").attr("href", "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=240568406&card_type=group&source=qrcode");
+                    }
+                   
+                </script>
     <style type='text/css'>
         * {
             margin: 0;
