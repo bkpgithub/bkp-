@@ -4,7 +4,6 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>秀丽媤柏庄专卖店双11购物专场</title>
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <!--[if IE 6]> 
@@ -183,18 +182,29 @@ DD_belatedPNG.fix('.png');
                 return false;
             });
         });
-        var userAgentInfo = navigator.userAgent;
-        var Agents = ["Android", "iPhone",
-            "SymbianOS", "Windows Phone",
-            "iPad", "iPod"];
-        var flag = true;
-        for (var v = 0; v < Agents.length; v++) {
-            if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                flag = false;
-                $(".jiaqun").attr("href", "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=240568406&card_type=group&source=qrcode");
-                break;
+        window.onload = function () {
+         
+            var userAgentInfo = navigator.userAgent;
+            alert(userAgentInfo);
+            var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    $(".guanggao").show();
+                     $(".g-width").css("width","100%");
+                    $(".jiaqun").attr("href", "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=240568406&card_type=group&source=qrcode");
+                     $("#delete").hide();
+                      $("#goods").css("margin-left","4%");
+                    $("#goods .gd-box").find("ul").css("width","auto");
+                    $("#imagepng").css("width","1000px");
+                    break;
+                }
             }
         }
+
     </script>
 </head>
 
@@ -211,7 +221,7 @@ DD_belatedPNG.fix('.png');
     <!--大广告区#7D13B4-->
     <div id="logo">
         <div class="logo-box g-width g-center">
-            <img src="images/1.png">
+            <img src="images/1.png" id="imagepng">
         </div>
     </div>
     <!--商品展示区-->
@@ -268,7 +278,7 @@ DD_belatedPNG.fix('.png');
                         </div>
                     </a>
                 </li>
-                <li>
+                <li id="delete">
                     <a href="javascript:void(0)" target="_blank">
                         <div class="box">
                             <div class="img"><img src="images/5.jpg" alt=""></div>
@@ -417,6 +427,20 @@ DD_belatedPNG.fix('.png');
                         </div>
                     </a>
                 </li>
+                <li class="guanggao" style="display:none">
+                    <a href="javascript:void(0)" target="_blank">
+                        <div class="box"  style="height:396px;">
+                            <div class="img"><img src="images/zuoce.jpg" alt=""  style="height:396px;"></div>
+                        </div>
+                    </a>
+                </li>
+                <li  class="guanggao" style="display:none">
+                    <a href="javascript:void(0)" target="_blank">
+                        <div class="box" style="height:396px;">
+                            <div class="img"><img src="images/youce.jpg" alt=""  style="height:396px;"></div>
+                            </div>
+                    </a>
+                </li>
             </ul>
         </div>
         <!--满49元包邮及返邮费-->
@@ -453,7 +477,8 @@ DD_belatedPNG.fix('.png');
             <dt></dt>
             <dd class="consult">
                 <span>QQ客服</span>
-                <div class="floating_left"><a class="jiaqun" href="tencent://message/?uin=434504639&amp;Site=&amp;menu=yes"><img src="images/qq.png" style="width:64px">QQ客服</a></div>
+                <div class="floating_left"><a class="jiaqun" href="tencent://message/?uin=434504639&amp;Site=&amp;menu=yes"><img
+                            src="images/qq.png" style="width:64px">QQ客服</a></div>
             </dd>
             <dd class="qrcord">
                 <span>扫一扫</span>
