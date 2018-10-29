@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>抽奖啊</title>
-
+  <title>充满希望的一天</title>
+  <link rel="icon" href="img/dnf.png" type="image/x-icon"/>
   <link rel="stylesheet" type="text/css" href="css/index.css">
 
 </head>
@@ -261,20 +261,8 @@
         } else {
           var num = $(this).index();
           $('.bg_main input').val(num);
-          $('.bg_bg').show();
-          $('.bg_main').show();
+          $('.ani' + num).addClass('showli');
         }
-      })
-      $('.qxxz').on("click",function () {
-        $('.bg_bg').hide();
-        $('.bg_main').hide();
-      })
-      $('.qrxz').on("click",function () {
-        var id = $(this).parent().parent().find('input').val();
-        //alert(id);
-        $('.ani' + id).addClass('showli');
-        $('.bg_bg').hide();
-        $('.bg_main').hide();
       })
     })
 
